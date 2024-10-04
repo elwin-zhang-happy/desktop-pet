@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 # 设置ui文件
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/main/ui_include)
+set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/src/ui_include)
 
 if(WIN32)
     set(CMAKE_PREFIX_PATH "D:/qtcreater/6.6.1/mingw_64")
@@ -24,20 +24,20 @@ if(OpenCV_FOUND)
 endif()
 
 # 头文件
-include_directories(${CMAKE_SOURCE_DIR}/main/include
-        ${CMAKE_SOURCE_DIR}/main/ui_include
-        ${CMAKE_SOURCE_DIR}/main/lib
+include_directories(${CMAKE_SOURCE_DIR}/src/include
+        ${CMAKE_SOURCE_DIR}/src/ui_include
+        ${CMAKE_SOURCE_DIR}/src/lib
 )
 # 源文件
 file(GLOB_RECURSE SOURCE_FILES
         "main.cpp"
-        "main/source/*.cpp"
-        "main/include/*.h"
-        "main/ui_include/*.ui"
-        #        ${CMAKE_SOURCE_DIR}/main/lib/*
+        "src/source/*.cpp"
+        "src/include/*.h"
+        "src/ui_include/*.ui"
+        #        ${CMAKE_SOURCE_DIR}/src/lib/*
 )
 # qt资源文件
-set(QRC_SOURCE_FILES main/res.qrc)
+set(QRC_SOURCE_FILES src/res.qrc)
 qt_add_resources(${QRC_SOURCE_FILES})
 
 #设置目标文件输出目录
