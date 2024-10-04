@@ -18,7 +18,7 @@ Desktop Pet 一款可爱的简单的形象，可以与它进行简单的交互�
 + README.md
 
 ## 功能图
-
+![桌宠.png](doc/%E6%A1%8C%E5%AE%A0.png)
 
 ## 安装
 
