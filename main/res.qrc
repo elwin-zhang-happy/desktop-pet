@@ -1,0 +1,34 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/images">
+        <!--图标-->
+        <file>resources/icon/thumbnail.png</file>
+        <!-- 空闲-->
+        <file>resources/idle/idle_0.png</file>
+        <file>resources/idle/idle_1.png</file>
+        <file>resources/idle/idle_2.png</file>
+        <file>resources/idle/idle_3.png</file>
+        <file>resources/idle/idle_4.png</file>
+        <file>resources/idle/idle_5.png</file>
+        <file>resources/idle/idle_6.png</file>
+        <file>resources/idle/idle_7.png</file>
+        <file>resources/idle/idle_8.png</file>
+        <file>resources/idle/idle_9.png</file>
+
+        <!--拖拽-->
+        <file>resources/drag/drag_0.png</file>
+        <file>resources/drag/drag_1.png</file>
+        <file>resources/drag/drag_2.png</file>
+
+        <!--退出-->
+        <file>resources/exit/exit_0.png</file>
+
+        <!--喝茶-->
+        <file>resources/drink_tea/drink_0.png</file>
+        <file>resources/drink_tea/drink_1.png</file>
+        <file>resources/drink_tea/drink_2.png</file>
+        <file>resources/drink_tea/drink_3.png</file>
+        <file>resources/drink_tea/drink_4.png</file>
+        <file>resources/drink_tea/drink_5.png</file>
+    </qresource>
+</RCC>
