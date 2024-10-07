@@ -16,6 +16,7 @@ enum class PetState {
 enum class ClickType {
     DOUBLE, // 双击
     SINGLE, // 单击
+    CLOSE, // 退出
     NONE,  // 无
 };
 

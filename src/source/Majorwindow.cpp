@@ -52,6 +52,7 @@ void MajorWindow::initial() {
     contextMenu = new QMenu(this);
     QAction *closeAction = contextMenu->addAction(QStringLiteral("关闭"));
     QMetaObject::Connection closeCon = connect(closeAction, &QAction::triggered, [this]() {
+        this->clickType = ClickType::CLOSE;
         this->currentPetState = PetState::EXIT;
         this->update();
         // 3秒定时退出
@@ -99,6 +100,9 @@ void MajorWindow::paintEvent(QPaintEvent *event) {
  * @param event 鼠标事件
  */
 void MajorWindow::mousePressEvent(QMouseEvent *event) {
+    if (clickType != ClickType::NONE) {
+        return;
+    }
     clickType = ClickType::SINGLE;
     timer.stop();
     triggerManager->resetPetState(PetState::DRINK_TEA);
