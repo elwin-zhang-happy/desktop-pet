@@ -52,11 +52,13 @@ void MajorWindow::initial() {
     contextMenu = new QMenu(this);
     QAction *closeAction = contextMenu->addAction(QStringLiteral("关闭"));
     QMetaObject::Connection closeCon = connect(closeAction, &QAction::triggered, [this]() {
+        this->timer.stop();
+        this->update();
         this->clickType = ClickType::CLOSE;
         this->currentPetState = PetState::EXIT;
-        this->update();
+        this->timer.start(Constants::timerInterval);
         // 3秒定时退出
-        QTimer::singleShot(1000, [this]() { QApplication::quit(); });
+        QTimer::singleShot(3000, [this]() { QApplication::quit(); });
     });
     // 设置样式表
     contextMenu->setStyleSheet("QMenu {"
